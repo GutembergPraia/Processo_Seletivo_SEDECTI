@@ -1,3 +1,18 @@
 
 Criar um novo projeto
 > composer create-project --prefer-dist laravel/laravel crudCliente
+
+entrar na pasta
+> cd crudCliente/
+
+testart Projeto
+> php artisan serve
+
+criar modelo do clinte
+> php artisan make:model Clientes -m
+
+executar migration
+> php artisan migrate
+
+php artisan make:request ClienteFormRequest
+
