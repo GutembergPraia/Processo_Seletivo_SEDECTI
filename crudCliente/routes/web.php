@@ -17,4 +17,7 @@ use App\Http\Controllers\ClientesController;
 Route::get('/', [ClientesController::class, 'index'])->name('list_clients');;
 Route::get('/clientes/creat', [ClientesController::class, 'create'])->name("creat_client");
 Route::post('/clientes/creat', [ClientesController::class, 'store']);
-Route::post('/clientes/{id}', [ClientesController::class, 'delete']);
+Route::delete('/clientes/{id}', [ClientesController::class, 'destroy']);
+
+Route::get('/clientes/{id}', [ClientesController::class, 'load']);
+Route::post('/clientes/{id}', [ClientesController::class, 'edit']);

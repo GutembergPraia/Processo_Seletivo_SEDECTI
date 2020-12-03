@@ -24,8 +24,8 @@ class ClienteFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:2',
-            'age'  => 'required',
+            'name' => 'required',
+            'age'  => 'required|max:99|min:1',
             'sexo' => 'required',
             'address' => 'required',
             'cpf' => 'required',
