@@ -51,10 +51,14 @@ class ClientesController extends Controller
     {
         $cliente = Clientes::find($id);
 
+        $cpf = $request->cpf;
+        $cpf = str_replace('.','',$cpf);
+        $cpf = str_replace('-','',$cpf);
+
         $cliente->name = $request->name;
         $cliente->age = $request->age;
         $cliente->sexo = $request->sexo;
-        $cliente->cpf = $request->cpf;
+        $cliente->cpf = $cpf;
         $cliente->address = $request->address;
         $cliente->save();
 

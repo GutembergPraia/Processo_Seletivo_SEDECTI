@@ -15,7 +15,6 @@ class ClienteFormRequest extends FormRequest
     {
         return true;
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -23,6 +22,7 @@ class ClienteFormRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
             'name' => 'required',
             'age'  => 'required|max:99|min:1',
